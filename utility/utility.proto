@@ -1,0 +1,18 @@
+syntax = "proto3";
+package utility;
+
+// The Utility definition.
+service Utility {
+  // Makes a Ping call
+  rpc Ping (Request) returns (Response) {}
+}
+
+// Request sent to the server
+message Request {
+  int32 DelayMilliSeconds = 1;
+}
+
+// Response from the Server
+message Response {
+  string PingResponse = 1;
+}
